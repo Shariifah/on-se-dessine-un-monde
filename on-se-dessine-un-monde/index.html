@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>On se dessine un monde | Chorégraphes & danseurs</title>
+<meta name="description" content="On se dessine un monde : des chorégraphes et danseurs qui créent leurs scènes à partir d'ouvrages.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,700;1,6..96,500;1,6..96,700&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="prog" aria-hidden="true"><i id="pi"></i></div>
+
+<div class="top" id="top">
+  <button class="logo" data-go="accueil">On se dessine un monde</button>
+  <button class="burger" id="burger" aria-expanded="false" aria-controls="menu"><span class="lines"><i></i><i></i></span><span id="blabel">Menu</span></button>
+</div>
+
+<nav class="menu" id="menu" aria-label="Menu principal">
+  <div class="menu-inner">
+    <p class="menu-kicker">Navigation</p>
+    <ul>
+      <li><button data-go="accueil"><span>01</span>Accueil</button></li>
+      <li><button data-go="realisation"><span>02</span>Réalisations</button></li>
+      <li><button data-go="spectacles"><span>03</span>Spectacles</button></li>
+      <li><button data-go="ouvrages"><span>04</span>Ouvrages</button></li>
+      <li><button data-go="agenda"><span>05</span>Agenda</button></li>
+      <li><button data-go="presse"><span>06</span>Presse</button></li>
+      <li><button data-go="contact"><span>07</span>Contact</button></li>
+    </ul>
+    <div class="foot">
+      <span>[contact@exemple.fr]</span>
+      <span>[+00 00 00 00 00]</span>
+      <span>[Ouagadougou]</span>
+    </div>
+  </div>
+</nav>
+
+<main>
+<!-- ACCUEIL -->
+<section class="page" id="accueil">
+  <div class="hero"><div class="wrap">
+    <div>
+      <p class="eyebrow">Compagnie de danse</p>
+      <h1><span><b>On se</b></span><span><b>dessine</b></span><span><b>un monde.</b></span></h1>
+      <p class="lead">Chorégraphes et danseurs, nous puisons dans des ouvrages pour imaginer et dessiner les scènes de nos spectacles. [Phrase d'accroche à personnaliser]</p>
+      <div class="cta"><button class="btn" data-go="spectacles">Voir les spectacles</button><button class="btn alt" data-go="agenda">Prochaines dates</button></div>
+    </div>
+    <svg class="scene" viewBox="0 0 500 560" role="img" aria-label="Formes découpées et traces de mouvement">
+      <circle class="f1" cx="310" cy="210" r="175" fill="#F9D9DF"/>
+      <circle class="f2" cx="105" cy="105" r="40" fill="#FFC94A"/>
+      <path class="f3" d="M50 430c-35-95 45-160 130-138s160 62 138 158-150 128-215 84-45-64-53-104z" fill="#E23E1B"/>
+      <path class="trace" pathLength="1" d="M70 500C50 380 170 350 230 260S380 120 440 40"/>
+      <path class="trace t2" pathLength="1" d="M150 520C140 430 260 410 300 330S400 240 450 200"/>
+    </svg>
+  </div>
+  <svg class="badge" viewBox="0 0 120 120" aria-hidden="true">
+    <defs><path id="cir" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"/></defs>
+    <text><textPath href="#cir">Lire • Dessiner • Danser • Rêver • </textPath></text>
+    <path d="M60 50v20M50 60h20M53 53l14 14M67 53L53 67" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+  </svg>
+  <button class="cue" aria-label="Faire défiler vers le contenu"><span>Défiler</span><i></i></button>
+  </div>
+
+  <div class="bande" aria-hidden="true">
+    <div class="bande-track">
+      <div class="bande-grp">
+        <b>Lire</b><em>✦</em><b>Dessiner</b><em>✦</em><b>Danser</b><em>✦</em><b>Répéter</b><em>✦</em>
+        <b>Lire</b><em>✦</em><b>Dessiner</b><em>✦</em><b>Danser</b><em>✦</em><b>Répéter</b><em>✦</em>
+        <b>Lire</b><em>✦</em><b>Dessiner</b><em>✦</em><b>Danser</b><em>✦</em><b>Répéter</b><em>✦</em>
+      </div>
+      <div class="bande-grp">
+        <b>Lire</b><em>✦</em><b>Dessiner</b><em>✦</em><b>Danser</b><em>✦</em><b>Répéter</b><em>✦</em>
+        <b>Lire</b><em>✦</em><b>Dessiner</b><em>✦</em><b>Danser</b><em>✦</em><b>Répéter</b><em>✦</em>
+        <b>Lire</b><em>✦</em><b>Dessiner</b><em>✦</em><b>Danser</b><em>✦</em><b>Répéter</b><em>✦</em>
+      </div>
+    </div>
+  </div>
+
+  <div class="steps section"><div class="wrap">
+    <h2 data-reveal>Du livre à la scène</h2>
+    <div class="row" data-stagger>
+      <div><span class="n">1</span><h3 class="squig">Lire</h3><p>Chaque création commence par un ouvrage : un texte, une image, une phrase qui résiste. [À adapter]</p></div>
+      <div><span class="n">2</span><h3 class="squig">Dessiner la scène</h3><p>Le livre devient espace : décor, lumière, parcours des corps. [À adapter]</p></div>
+      <div><span class="n">3</span><h3 class="squig">Danser</h3><p>Le mouvement écrit ce que les mots ne disent pas. [À adapter]</p></div>
+    </div>
+  </div></div>
+
+  <div class="section"><div class="wrap">
+    <h2 data-reveal>Nos spectacles</h2>
+    <div class="car" id="car" tabindex="0" aria-roledescription="carrousel" aria-label="Spectacles à la une">
+      <div class="car-vp"><div class="car-track" id="car-track"></div></div>
+      <button class="car-btn prev" id="car-prev" aria-label="Spectacle précédent"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+      <button class="car-btn next" id="car-next" aria-label="Spectacle suivant"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+      <div class="car-info">
+        <span class="car-count" id="car-count">01 — 03</span>
+        <div class="car-prog"><i id="car-prog-i"></i></div>
+        <div class="car-dots" id="car-dots"></div>
+      </div>
+    </div>
+    <div class="cta" data-reveal><button class="btn" data-go="spectacles">Tous les spectacles</button></div>
+  </div></div>
+</section>
+
+<!-- COMPAGNIE -->
+<section class="page" id="realisation">
+  <div class="phead c-verm"><div class="wrap"><p class="eyebrow">La compagnie</p><h2>Réalisations</h2><p>[Une phrase qui résume votre projet artistique.]</p></div></div>
+  <div class="section"><div class="wrap split">
+    <div data-reveal="left">
+      <p>[Présentez les realisations : Les differents projets realisés par la compagnie.]</p>
+      <p>[Deuxième paragraphe : les artistes, les partenaires, les lieux de résidence.]</p>
+      <h3 class="block-title squig" data-reveal>Les artistes</h3>
+      <p>[Prénom Nom], chorégraphe. [Prénom Nom], danseur·se. [Biographies à ajouter]</p>
+    </div>
+    <div class="gallery" data-stagger>
+      <!-- Photo : ajoutez style="background-image:url('images/compagnie.jpg')" -->
+      <div class="ph">Photo</div>
+      <div class="ph">Photo</div>
+      <div class="ph">Photo</div>
+    </div>
+  </div></div>
+</section>
+
+<!-- SPECTACLES -->
+<section class="page" id="spectacles">
+  <div class="phead c-bleu"><div class="wrap"><p class="eyebrow">Le répertoire</p><h2>Spectacles</h2><p>[Introduction : le répertoire de la compagnie.]</p></div></div>
+  <div class="section"><div class="wrap"><div class="grid cards tight" id="list-spectacles" data-stagger></div></div></div>
+</section>
+
+<!-- OUVRAGES -->
+<section class="page" id="ouvrages">
+  <div class="phead c-ink"><div class="wrap"><p class="eyebrow">Sources</p><h2>Ouvrages</h2><p>Chaque spectacle naît d'une lecture. Voici les ouvrages qui nourrissent nos scènes. [À adapter]</p></div></div>
+  <div class="section"><div class="wrap" id="list-ouvrages" data-stagger></div></div>
+</section>
+
+<!-- AGENDA -->
+<section class="page" id="agenda">
+  <div class="phead c-bleu"><div class="wrap"><p class="eyebrow">Dates</p><h2>Agenda</h2><p>Retrouvez-nous sur scène.</p></div></div>
+  <div class="section"><div class="wrap" id="list-agenda" data-stagger></div></div>
+</section>
+
+<!-- PRESSE -->
+<section class="page" id="presse">
+  <div class="phead c-verm"><div class="wrap"><p class="eyebrow">Échos</p><h2>Presse</h2><p>Ce qu'on dit de notre travail.</p></div></div>
+  <div class="section"><div class="wrap">
+    <div class="grid tight" data-stagger>
+      <blockquote><p class="q">« [Extrait de presse ou avis de spectateur.] »</p><cite>[Média ou nom]</cite></blockquote>
+      <blockquote><p class="q">« [Deuxième extrait.] »</p><cite>[Média ou nom]</cite></blockquote>
+    </div>
+    <h3 class="block-title squig" data-reveal>Dossiers à télécharger</h3>
+    <p data-reveal><a href="#">Dossier de présentation (PDF)</a> · <a href="#">Fiche technique (PDF)</a></p>
+  </div></div>
+</section>
+
+<!-- CONTACT -->
+<section class="page" id="contact">
+  <div class="phead c-ink"><div class="wrap"><p class="eyebrow">Écrire</p><h2>Contact</h2><p>Programmation, résidence, atelier : écrivez-nous.</p></div></div>
+  <div class="section"><div class="wrap split">
+    <div data-reveal="left">
+      <p>[contact@exemple.fr]<br>[+00 00 00 00 00]<br>[Adresse de la compagnie]</p>
+    </div>
+    <!-- Remplacez VOTRE_ID par l'identifiant Formspree -->
+    <form data-reveal="right" action="https://formspree.io/f/VOTRE_ID" method="POST">
+      <label>Nom<input name="nom" required></label>
+      <label>E-mail<input type="email" name="email" required></label>
+      <label>Sujet<select name="sujet"><option>Programmation</option><option>Atelier / formation</option><option>Autre</option></select></label>
+      <label>Message<textarea name="message" required></textarea></label>
+      <button class="btn" type="submit">Envoyer</button>
+    </form>
+  </div></div>
+</section>
+</main>
+
+<button class="haut" id="haut" aria-label="Revenir en haut de page"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg></button>
+
+<footer><div class="wrap">
+  <p class="f-word">On se dessine un monde.</p>
+  <div class="frow"><span>© <span id="y"></span> On se dessine un monde</span><span>Mentions légales · Confidentialité</span></div>
+</div></footer>
+
+<script>
+/* ===== CONTENU : modifiez ces listes, le site se met à jour tout seul =====
+   Pour une IMAGE : mettez la photo dans un dossier "images" à côté de ce fichier,
+   puis écrivez son chemin : image:"images/spectacle1.jpg" (laissez "" pour aucune image).
+   "inspire" = titre EXACT de l'ouvrage qui a inspiré le spectacle (liste OUVRAGES).
+   Ces listes alimentent le carrousel de l'accueil ET la page Spectacles. */
+const SPECTACLES=[
+  {titre:"Titre du spectacle 1",annee:"2025",infos:"Création · 6 interprètes · 60 min",texte:"[Résumé du spectacle en deux phrases.]",image:"",inspire:"Titre de l'ouvrage 1"},
+  {titre:"Titre du spectacle 2",annee:"2023",infos:"Duo · 45 min",texte:"[Résumé du spectacle en deux phrases.]",image:"",inspire:"Titre de l'ouvrage 2"},
+  {titre:"Titre du spectacle 3",annee:"2021",infos:"Solo · 35 min",texte:"[Résumé du spectacle en deux phrases.]",image:"",inspire:"Titre de l'ouvrage 1"}
+];
+const OUVRAGES=[
+  {titre:"Titre de l'ouvrage 1",auteur:"[Auteur]",annee:"[Année]",texte:"[Ce que cet ouvrage apporte aux scènes : un texte, une image, une atmosphère.]",image:""},
+  {titre:"Titre de l'ouvrage 2",auteur:"[Auteur]",annee:"[Année]",texte:"[Ce que cet ouvrage apporte aux scènes.]",image:""}
+];
+const AGENDA=[
+  {jour:"12",mois:"Nov 2026",titre:"Titre du spectacle 1",lieu:"[Théâtre, Ville]",lien:"#"},
+  {jour:"03",mois:"Déc 2026",titre:"Titre du spectacle 1",lieu:"[Théâtre, Ville]",lien:"#"},
+  {jour:"21",mois:"Jan 2027",titre:"Titre du spectacle 2",lieu:"[Théâtre, Ville]",lien:"#"}
+];
+
+/* ===== Code du site (pas besoin d'y toucher) ===== */
+const $=s=>document.querySelector(s);
+const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const bg=u=>u?` style="background-image:url('${u}')"`:'';
+const card=s=>`<article class="card"><div class="img"${bg(s.image)}><span class="sticker">${s.annee}</span>${s.image?'':s.titre}</div><div class="meta">${s.annee} · ${s.infos}</div><h3>${s.titre}</h3>${s.inspire?`<p class="insp">Inspiré de : ${s.inspire}</p>`:''}<p>${s.texte}</p></article>`;
+const slide=s=>`<div class="car-slide"><article class="car-card"><div class="car-fig"${bg(s.image)}><span class="sticker">${s.annee}</span><span>${s.image?'':s.titre}</span></div><div class="car-body"><div class="meta">${s.annee} · ${s.infos}</div><h3>${s.titre}</h3>${s.inspire?`<p class="insp">Inspiré de : ${s.inspire}</p>`:''}<p>${s.texte}</p><div class="cta"><button class="btn sm" data-go="spectacles">Voir le spectacle</button></div></div></article></div>`;
+
+/* Rendus */
+$('#list-spectacles').innerHTML=SPECTACLES.map(card).join('');
+$('#list-ouvrages').innerHTML=OUVRAGES.map(o=>{const l=SPECTACLES.filter(x=>x.inspire===o.titre).map(x=>x.titre);return `<div class="book"><div class="cover"${bg(o.image)}>${o.image?'':o.titre}</div><div><h3>${o.titre}</h3><div style="color:var(--muted)">${o.auteur} · ${o.annee}</div><p>${o.texte}</p>${l.length?`<p class="insp">A inspiré : ${l.join(', ')}</p>`:''}</div></div>`}).join('');
+$('#list-agenda').innerHTML=AGENDA.map(a=>`<div class="date"><div class="d">${a.jour}<small>${a.mois}</small></div><div><h3>${a.titre}</h3><p>${a.lieu}</p></div><a class="btn alt" href="${a.lien}">Réserver</a></div>`).join('');
+
+/* Menu + navigation entre pages */
+const pages=[...document.querySelectorAll('.page')],items=[...document.querySelectorAll('.menu li button')];
+const body=document.body,burger=$('#burger');
+function menu(open){body.classList.toggle('open-menu',open);burger.setAttribute('aria-expanded',open);$('#blabel').textContent=open?'Fermer':'Menu'}
+burger.addEventListener('click',()=>menu(!body.classList.contains('open-menu')));
+addEventListener('keydown',e=>{if(e.key==='Escape')menu(false)});
+
+/* Révélations au scroll */
+const io=new IntersectionObserver(es=>{es.forEach(en=>{if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}})},{threshold:.15,rootMargin:'0px 0px -6% 0px'});
+function rearm(p){p&&p.querySelectorAll('[data-reveal],[data-stagger]').forEach(el=>{el.classList.remove('in');io.observe(el)})}
+
+function go(id){
+  if(!document.getElementById(id))id='accueil';
+  pages.forEach(p=>p.classList.toggle('on',p.id===id));
+  items.forEach(b=>b.dataset.go===id?b.setAttribute('aria-current','page'):b.removeAttribute('aria-current'));
+  rearm(document.getElementById(id));
+  menu(false);window.scrollTo(0,0);
+}
+document.addEventListener('click',e=>{const t=e.target.closest('[data-go]');if(t){e.preventDefault();location.hash=t.dataset.go;if(location.hash.slice(1)===t.dataset.go)go(t.dataset.go)}});
+addEventListener('hashchange',()=>go(location.hash.slice(1)));
+
+/* Défilement : en-tête, progression, retour en haut, parallaxe */
+const topbar=$('#top'),pi=$('#pi'),haut=$('#haut'),scene=$('.scene');
+let tick=false;
+function onScroll(){
+  const y=scrollY;
+  topbar.classList.toggle('solid',y>60);
+  const h=document.documentElement.scrollHeight-innerHeight;
+  pi.style.transform=`scaleX(${h>0?y/h:0})`;
+  haut.classList.toggle('show',y>560);
+  if(!RM&&scene&&innerWidth>900&&y<innerHeight*1.2){scene.style.transform=`translateY(${y*-0.08}px)`}
+  tick=false;
+}
+addEventListener('scroll',()=>{if(!tick){tick=true;requestAnimationFrame(onScroll)}},{passive:true});
+onScroll();
+haut.addEventListener('click',()=>scrollTo({top:0,behavior:RM?'auto':'smooth'}));
+const cue=$('.cue');cue&&cue.addEventListener('click',()=>{const s=$('.steps');s&&s.scrollIntoView({behavior:RM?'auto':'smooth'})});
+
+/* ===== Carrousel des spectacles ===== */
+const N=SPECTACLES.length;
+const car=$('#car'),track=$('#car-track'),dots=$('#car-dots'),count=$('#car-count'),cpi=$('#car-prog-i'),vp=car.querySelector('.car-vp');
+track.innerHTML=SPECTACLES.map(slide).join('');
+dots.innerHTML=SPECTACLES.map((_,k)=>`<button class="car-dot" aria-label="Aller au spectacle ${k+1}"></button>`).join('');
+const dotEls=[...dots.children];
+let ci=0,ctimer=null,holding=false;
+function carGo(k,user){
+  ci=(k+N)%N;
+  track.style.transform=`translateX(-${ci*100}%)`;
+  dotEls.forEach((d,i)=>d.classList.toggle('on',i===ci));
+  count.textContent=String(ci+1).padStart(2,'0')+' — '+String(N).padStart(2,'0');
+  if(!RM){cpi.classList.remove('run');void cpi.offsetWidth;if(!holding)cpi.classList.add('run')}
+  if(user)restart();
+}
+function restart(){if(RM||N<2)return;clearInterval(ctimer);ctimer=setInterval(()=>carGo(ci+1),5600)}
+function hold(){holding=true;clearInterval(ctimer);cpi.classList.remove('run')}
+function release(){holding=false;if(!RM){cpi.classList.remove('run');void cpi.offsetWidth;cpi.classList.add('run')}restart()}
+car.addEventListener('mouseenter',hold);
+car.addEventListener('mouseleave',release);
+car.addEventListener('focusin',hold);
+car.addEventListener('focusout',release);
+$('#car-prev').addEventListener('click',()=>carGo(ci-1,true));
+$('#car-next').addEventListener('click',()=>carGo(ci+1,true));
+dotEls.forEach((d,i)=>d.addEventListener('click',()=>carGo(i,true)));
+car.addEventListener('keydown',e=>{if(e.key==='ArrowLeft'){e.preventDefault();carGo(ci-1,true)}if(e.key==='ArrowRight'){e.preventDefault();carGo(ci+1,true)}});
+let sx=null,dragged=false;
+vp.addEventListener('pointerdown',e=>{sx=e.clientX;dragged=false;vp.classList.add('drag');try{vp.setPointerCapture(e.pointerId)}catch(_){}});
+vp.addEventListener('pointermove',e=>{if(sx!==null&&Math.abs(e.clientX-sx)>8)dragged=true});
+vp.addEventListener('pointerup',e=>{if(sx===null)return;const dx=e.clientX-sx;vp.classList.remove('drag');if(Math.abs(dx)>45){dx<0?carGo(ci+1,true):carGo(ci-1,true)}sx=null;setTimeout(()=>{dragged=false},50)});
+vp.addEventListener('pointercancel',()=>{sx=null;vp.classList.remove('drag')});
+vp.addEventListener('click',e=>{if(dragged){e.preventDefault();e.stopPropagation()}},true);
+carGo(0);restart();
+
+go(location.hash.slice(1)||'accueil');
+$('#y').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
