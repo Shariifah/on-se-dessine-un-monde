@@ -24,7 +24,7 @@
     <ul>
       <li><button data-go="accueil"><span>01</span>Accueil</button></li>
       <li><button data-go="realisation"><span>02</span>Réalisations</button></li>
-      <li><button data-go="spectacles"><span>03</span>Spectacles</button></li>
+      <li><button data-go="creations"><span>03</span>Créations</button></li>
       <li><button data-go="ouvrages"><span>04</span>Ouvrages</button></li>
       <li><button data-go="agenda"><span>05</span>Agenda</button></li>
       <li><button data-go="presse"><span>06</span>Presse</button></li>
@@ -46,7 +46,7 @@
       <p class="eyebrow">Compagnie de danse</p>
       <h1><span><b>On se</b></span><span><b>dessine</b></span><span><b>un monde.</b></span></h1>
       <p class="lead">Chorégraphes et danseurs, nous puisons dans des ouvrages pour imaginer et dessiner les scènes de nos spectacles. [Phrase d'accroche à personnaliser]</p>
-      <div class="cta"><button class="btn" data-go="spectacles">Voir les spectacles</button><button class="btn alt" data-go="agenda">Prochaines dates</button></div>
+      <div class="cta"><button class="btn" data-go="creations">Voir les Creations</button><button class="btn alt" data-go="agenda">Prochaines dates</button></div>
     </div>
     <svg class="scene" viewBox="0 0 500 560" role="img" aria-label="Formes découpées et traces de mouvement">
       <circle class="f1" cx="310" cy="210" r="175" fill="#F9D9DF"/>
@@ -89,18 +89,18 @@
   </div></div>
 
   <div class="section"><div class="wrap">
-    <h2 data-reveal>Nos spectacles</h2>
-    <div class="car" id="car" tabindex="0" aria-roledescription="carrousel" aria-label="Spectacles à la une">
+    <h2 data-reveal>Nos Créations</h2>
+    <div class="car" id="car" tabindex="0" aria-roledescription="carrousel" aria-label="Creations à la une">
       <div class="car-vp"><div class="car-track" id="car-track"></div></div>
-      <button class="car-btn prev" id="car-prev" aria-label="Spectacle précédent"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
-      <button class="car-btn next" id="car-next" aria-label="Spectacle suivant"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+      <button class="car-btn prev" id="car-prev" aria-label="Creations précédent"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+      <button class="car-btn next" id="car-next" aria-label="creations suivant"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
       <div class="car-info">
         <span class="car-count" id="car-count">01 — 03</span>
         <div class="car-prog"><i id="car-prog-i"></i></div>
         <div class="car-dots" id="car-dots"></div>
       </div>
     </div>
-    <div class="cta" data-reveal><button class="btn" data-go="spectacles">Tous les spectacles</button></div>
+    <div class="cta" data-reveal><button class="btn" data-go="creations">Toutes les Créations</button></div>
   </div></div>
 </section>
 
@@ -123,10 +123,10 @@
   </div></div>
 </section>
 
-<!-- SPECTACLES -->
-<section class="page" id="spectacles">
-  <div class="phead c-bleu"><div class="wrap"><p class="eyebrow">Le répertoire</p><h2>Spectacles</h2><p>[Introduction : le répertoire de la compagnie.]</p></div></div>
-  <div class="section"><div class="wrap"><div class="grid cards tight" id="list-spectacles" data-stagger></div></div></div>
+<!-- CREATION -->
+<section class="page" id="creations">
+  <div class="phead c-bleu"><div class="wrap"><p class="eyebrow">Le répertoire</p><h2>des créations</h2><p>[Introduction : le répertoire de la compagnie.]</p></div></div>
+  <div class="section"><div class="wrap"><div class="grid cards tight" id="list-creations" data-stagger></div></div></div>
 </section>
 
 <!-- OUVRAGES -->
@@ -206,10 +206,10 @@ const $=s=>document.querySelector(s);
 const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
 const bg=u=>u?` style="background-image:url('${u}')"`:'';
 const card=s=>`<article class="card"><div class="img"${bg(s.image)}><span class="sticker">${s.annee}</span>${s.image?'':s.titre}</div><div class="meta">${s.annee} · ${s.infos}</div><h3>${s.titre}</h3>${s.inspire?`<p class="insp">Inspiré de : ${s.inspire}</p>`:''}<p>${s.texte}</p></article>`;
-const slide=s=>`<div class="car-slide"><article class="car-card"><div class="car-fig"${bg(s.image)}><span class="sticker">${s.annee}</span><span>${s.image?'':s.titre}</span></div><div class="car-body"><div class="meta">${s.annee} · ${s.infos}</div><h3>${s.titre}</h3>${s.inspire?`<p class="insp">Inspiré de : ${s.inspire}</p>`:''}<p>${s.texte}</p><div class="cta"><button class="btn sm" data-go="spectacles">Voir le spectacle</button></div></div></article></div>`;
+const slide=s=>`<div class="car-slide"><article class="car-card"><div class="car-fig"${bg(s.image)}><span class="sticker">${s.annee}</span><span>${s.image?'':s.titre}</span></div><div class="car-body"><div class="meta">${s.annee} · ${s.infos}</div><h3>${s.titre}</h3>${s.inspire?`<p class="insp">Inspiré de : ${s.inspire}</p>`:''}<p>${s.texte}</p><div class="cta"><button class="btn sm" data-go="creations">Voir le spectacle</button></div></div></article></div>`;
 
 /* Rendus */
-$('#list-spectacles').innerHTML=SPECTACLES.map(card).join('');
+$('#list-creations').innerHTML=SPECTACLES.map(card).join('');
 $('#list-ouvrages').innerHTML=OUVRAGES.map(o=>{const l=SPECTACLES.filter(x=>x.inspire===o.titre).map(x=>x.titre);return `<div class="book"><div class="cover"${bg(o.image)}>${o.image?'':o.titre}</div><div><h3>${o.titre}</h3><div style="color:var(--muted)">${o.auteur} · ${o.annee}</div><p>${o.texte}</p>${l.length?`<p class="insp">A inspiré : ${l.join(', ')}</p>`:''}</div></div>`}).join('');
 $('#list-agenda').innerHTML=AGENDA.map(a=>`<div class="date"><div class="d">${a.jour}<small>${a.mois}</small></div><div><h3>${a.titre}</h3><p>${a.lieu}</p></div><a class="btn alt" href="${a.lien}">Réserver</a></div>`).join('');
 
