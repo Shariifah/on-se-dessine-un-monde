@@ -25,13 +25,14 @@
       <li><button data-go="accueil"><span>01</span>Accueil</button></li>
       <li><button data-go="realisation"><span>02</span>Réalisations</button></li>
       <li><button data-go="creations"><span>03</span>Créations</button></li>
-      <li><button data-go="ouvrages"><span>04</span>Ouvrages</button></li>
-      <li><button data-go="agenda"><span>05</span>Agenda</button></li>
-      <li><button data-go="presse"><span>06</span>Presse</button></li>
-      <li><button data-go="contact"><span>07</span>Contact</button></li>
+      <li><button data-go="lab-creation"><span>04</span>Laboratoire de création</button></li>
+      <li><button data-go="ouvrages"><span>05</span>Ouvrages</button></li>
+      <li><button data-go="agenda"><span>06</span>Agenda</button></li>
+      <li><button data-go="presse"><span>07</span>Presse</button></li>
+      <li><button data-go="contact"><span>08</span>Contact</button></li>
     </ul>
     <div class="foot">
-      <span>[contact@exemple.fr]</span>
+      <span> Onsedessineunmonde@gmail.com</span>
       <span>[+00 00 00 00 00]</span>
       <span>[Ouagadougou]</span>
     </div>
@@ -43,9 +44,11 @@
 <section class="page" id="accueil">
   <div class="hero"><div class="wrap">
     <div>
-      <p class="eyebrow">Compagnie de danse</p>
+      <p class="eyebrow">Projet de danse</p>
       <h1><span><b>On se</b></span><span><b>dessine</b></span><span><b>un monde.</b></span></h1>
-      <p class="lead">Chorégraphes et danseurs, nous puisons dans des ouvrages pour imaginer et dessiner les scènes de nos spectacles. [Phrase d'accroche à personnaliser]</p>
+      <p class="lead">À ceux qui écrivent avec leur corps, à ceux qui rêvent le mouvement pensé et qui se pense,
+        à ceux qui cherchent à donner un autre langage aux textes… Danser un livre, une page, des récits qui se portent dignement. 
+      </p>
       <div class="cta"><button class="btn" data-go="creations">Voir les Creations</button><button class="btn alt" data-go="agenda">Prochaines dates</button></div>
     </div>
     <svg class="scene" viewBox="0 0 500 560" role="img" aria-label="Formes découpées et traces de mouvement">
@@ -129,6 +132,12 @@
   <div class="section"><div class="wrap"><div class="grid cards tight" id="list-creations" data-stagger></div></div></div>
 </section>
 
+<!-- LABORATOIRE DE CREATION -->
+<section class="page" id="lab-creation">
+  <div class="phead c-bleu"><div class="wrap"><p class="eyebrow">Le laboratoire</p><h2>des créations</h2><p>[Introduction : le laboratoire de création du projet de danse.]</p></div></div>
+  <div class="section"><div class="wrap"><div class="grid cards tight" id="list-lab-creation" data-stagger></div></div></div>
+</section>
+
 <!-- OUVRAGES -->
 <section class="page" id="ouvrages">
   <div class="phead c-ink"><div class="wrap"><p class="eyebrow">Sources</p><h2>Ouvrages</h2><p>Chaque spectacle naît d'une lecture. Voici les ouvrages qui nourrissent nos scènes. [À adapter]</p></div></div>
@@ -191,6 +200,11 @@ const SPECTACLES=[
   {titre:"Titre du spectacle 2",annee:"2023",infos:"Duo · 45 min",texte:"[Résumé du spectacle en deux phrases.]",image:"",inspire:"Titre de l'ouvrage 2"},
   {titre:"Titre du spectacle 3",annee:"2021",infos:"Solo · 35 min",texte:"[Résumé du spectacle en deux phrases.]",image:"",inspire:"Titre de l'ouvrage 1"}
 ];
+const LABORATOIRE_DE_CREATION=[
+  {titre:"Titre du laboratoire 1",annee:"2025",infos:"Création · 6 interprètes · 60 min",texte:"[Résumé du spectacle en deux phrases.]",image:"",inspire:"Titre de l'ouvrage 1"},
+  {titre:"Titre du laboratoire 2",annee:"2023",infos:"Duo · 45 min",texte:"[Résumé du spectacle en deux phrases.]",image:"",inspire:"Titre de l'ouvrage 2"},
+  {titre:"Titre du laboratoire 3",annee:"2021",infos:"Solo · 35 min",texte:"[Résumé du spectacle en deux phrases.]",image:"",inspire:"Titre de l'ouvrage 1"}
+];
 const OUVRAGES=[
   {titre:"Titre de l'ouvrage 1",auteur:"[Auteur]",annee:"[Année]",texte:"[Ce que cet ouvrage apporte aux scènes : un texte, une image, une atmosphère.]",image:""},
   {titre:"Titre de l'ouvrage 2",auteur:"[Auteur]",annee:"[Année]",texte:"[Ce que cet ouvrage apporte aux scènes.]",image:""}
@@ -210,6 +224,7 @@ const slide=s=>`<div class="car-slide"><article class="car-card"><div class="car
 
 /* Rendus */
 $('#list-creations').innerHTML=SPECTACLES.map(card).join('');
+$('#list-lab-creation').innerHTML=LABORATOIRE_DE_CREATION.map(card).join('');
 $('#list-ouvrages').innerHTML=OUVRAGES.map(o=>{const l=SPECTACLES.filter(x=>x.inspire===o.titre).map(x=>x.titre);return `<div class="book"><div class="cover"${bg(o.image)}>${o.image?'':o.titre}</div><div><h3>${o.titre}</h3><div style="color:var(--muted)">${o.auteur} · ${o.annee}</div><p>${o.texte}</p>${l.length?`<p class="insp">A inspiré : ${l.join(', ')}</p>`:''}</div></div>`}).join('');
 $('#list-agenda').innerHTML=AGENDA.map(a=>`<div class="date"><div class="d">${a.jour}<small>${a.mois}</small></div><div><h3>${a.titre}</h3><p>${a.lieu}</p></div><a class="btn alt" href="${a.lien}">Réserver</a></div>`).join('');
 
@@ -251,7 +266,7 @@ onScroll();
 haut.addEventListener('click',()=>scrollTo({top:0,behavior:RM?'auto':'smooth'}));
 const cue=$('.cue');cue&&cue.addEventListener('click',()=>{const s=$('.steps');s&&s.scrollIntoView({behavior:RM?'auto':'smooth'})});
 
-/* ===== Carrousel des spectacles ===== */
+/* ===== Carrousel des créations ===== */
 const N=SPECTACLES.length;
 const car=$('#car'),track=$('#car-track'),dots=$('#car-dots'),count=$('#car-count'),cpi=$('#car-prog-i'),vp=car.querySelector('.car-vp');
 track.innerHTML=SPECTACLES.map(slide).join('');
