@@ -14,7 +14,9 @@
 <div class="prog" aria-hidden="true"><i id="pi"></i></div>
 
 <div class="top" id="top">
-  <button class="logo" data-go="accueil">On se dessine un monde</button>
+  <button class="logo" data-go="accueil">
+  <img src="images/logo.jpeg" alt="On se dessine un monde" class="logo-img">
+</button>
   <button class="burger" id="burger" aria-expanded="false" aria-controls="menu"><span class="lines"><i></i><i></i></span><span id="blabel">Menu</span></button>
 </div>
 
@@ -45,7 +47,8 @@
   <div class="hero"><div class="wrap">
     <div>
       <p class="eyebrow">Projet de danse</p>
-      <h1><span><b>On se</b></span><span><b>dessine</b></span><span><b>un monde.</b></span></h1>
+      <!--<h1><span><b>o♥ /</b></span><span><b>ds!♥</b></span><span><b>1●♥</b></span></h1>-->
+      <h1 class="titre-dessin"><span><b>o♥ / ds!♥ 1●♥</b></span></h1>
       <p class="lead">À ceux qui écrivent avec leur corps, à ceux qui rêvent le mouvement pensé et qui se pense,
         à ceux qui cherchent à donner un autre langage aux textes… Danser un livre, une page, des récits qui se portent dignement. <br>
         <br>
@@ -197,10 +200,10 @@
    puis écrivez son chemin : image:"images/spectacle1.jpg" (laissez "" pour aucune image).
    "inspire" = titre EXACT de l'ouvrage qui a inspiré le spectacle (liste OUVRAGES).
    Ces listes alimentent le carrousel de l'accueil ET la page Spectacles. */
-const SPECTACLES=[
-  {titre:"Titre du spectacle 1",annee:"2025",infos:"Création · 6 interprètes · 60 min",texte:"[Résumé du spectacle en deux phrases.]",image:"",inspire:"Titre de l'ouvrage 1"},
-  {titre:"Titre du spectacle 2",annee:"2023",infos:"Duo · 45 min",texte:"[Résumé du spectacle en deux phrases.]",image:"",inspire:"Titre de l'ouvrage 2"},
-  {titre:"Titre du spectacle 3",annee:"2021",infos:"Solo · 35 min",texte:"[Résumé du spectacle en deux phrases.]",image:"",inspire:"Titre de l'ouvrage 1"}
+   const SPECTACLES=[
+  {titre:"DJANDJOBA 360° d'Elles",annee:"2025",infos:"Création · 6 interprètes · 60 min",texte:"Djanjoba 365° d'Elles est un spectacle autour de la condition féminine : leurs histoires, joies, peines et combats. Sur une scénographie circulaire de quarante chaises, quarante femmes figurantes prennent place et participent à une création collective.",image:"images/djandjoba.jpeg",inspire:"L'émancipation de la femme et la lutte de libération des femmes - Thomas Sankara · Je suis née libre - Rokia Traoré · Parole de Femmes - Éditions Éloïse · Les Ambitieuses - Virginie Girod"},
+  {titre:"Titre de la création 2",annee:"2023",infos:"Duo · 45 min",texte:"[Résumé de la création en deux phrases.]",image:"",inspire:"Titre de l'ouvrage 2"},
+  {titre:"Titre de la création 3",annee:"2021",infos:"Solo · 35 min",texte:"[Résumé de la création en deux phrases.]",image:"",inspire:"Titre de l'ouvrage 1"}
 ];
 const LABORATOIRE_DE_CREATION=[
   {titre:"Titre du laboratoire 1",annee:"2025",infos:"Création · 6 interprètes · 60 min",texte:"[Résumé du spectacle en deux phrases.]",image:"",inspire:"Titre de l'ouvrage 1"},
@@ -212,9 +215,9 @@ const OUVRAGES=[
   {titre:"Titre de l'ouvrage 2",auteur:"[Auteur]",annee:"[Année]",texte:"[Ce que cet ouvrage apporte aux scènes.]",image:""}
 ];
 const AGENDA=[
-  {jour:"12",mois:"Nov 2026",titre:"Titre du spectacle 1",lieu:"[Théâtre, Ville]",lien:"#"},
-  {jour:"03",mois:"Déc 2026",titre:"Titre du spectacle 1",lieu:"[Théâtre, Ville]",lien:"#"},
-  {jour:"21",mois:"Jan 2027",titre:"Titre du spectacle 2",lieu:"[Théâtre, Ville]",lien:"#"}
+  {jour:"12",mois:"Nov 2026",titre:"Titre de la création 1",lieu:"[Théâtre, Ville]",lien:"#"},
+  {jour:"03",mois:"Déc 2026",titre:"Titre de la création 1",lieu:"[Théâtre, Ville]",lien:"#"},
+  {jour:"21",mois:"Jan 2027",titre:"Titre de la création 2",lieu:"[Théâtre, Ville]",lien:"#"}
 ];
 
 /* ===== Code du site (pas besoin d'y toucher) ===== */
