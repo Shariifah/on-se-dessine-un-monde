@@ -25,10 +25,11 @@
     <p class="menu-kicker">Navigation</p>
     <ul>
       <li><button data-go="accueil"><span>01</span>Accueil</button></li>
-      <li><button data-go="realisation"><span>02</span>Réalisations</button></li>
+      <li><button data-go="galerie"><span>02</span>Galerie</button></li>
       <li><button data-go="creations"><span>03</span>Créations</button></li>
       <li><button data-go="lab-creation"><span>04</span>Laboratoire de création</button></li>
       <li><button data-go="ouvrages"><span>05</span>Ouvrages</button></li>
+      <li><button data-go="collaboration"><span>09</span>collaboration</button></li>
       <li><button data-go="agenda"><span>06</span>Agenda</button></li>
       <li><button data-go="presse"><span>07</span>Presse</button></li>
       <li><button data-go="contact"><span>08</span>Contact</button></li>
@@ -113,14 +114,11 @@
 </section>
 
 <!-- COMPAGNIE -->
-<section class="page" id="realisation">
-  <div class="phead c-verm"><div class="wrap"><p class="eyebrow">La compagnie</p><h2>Réalisations</h2><p>[Une phrase qui résume votre projet artistique.]</p></div></div>
+<section class="page" id="galerie">
+  <div class="phead c-verm"><div class="wrap"><p class="eyebrow">Les galeries</p><h2>La galerie</h2><p>[Une phrase qui résume votre projet artistique.]</p></div></div>
   <div class="section"><div class="wrap split">
     <div data-reveal="left">
-      <p>[Présentez les realisations : Les differents projets realisés par la compagnie.]</p>
-      <p>[Deuxième paragraphe : les artistes, les partenaires, les lieux de résidence.]</p>
-      <h3 class="block-title squig" data-reveal>Les artistes</h3>
-      <p>[Prénom Nom], chorégraphe. [Prénom Nom], danseur·se. [Biographies à ajouter]</p>
+      <p>[Présentez les images : Les differents projets realisés par la compagnie.]</p>
     </div>
     <div class="gallery" data-stagger>
       <!-- Photo : ajoutez style="background-image:url('images/compagnie.jpg')" -->
@@ -153,6 +151,25 @@
 <section class="page" id="agenda">
   <div class="phead c-bleu"><div class="wrap"><p class="eyebrow">Dates</p><h2>Agenda</h2><p>Retrouvez-nous sur scène.</p></div></div>
   <div class="section"><div class="wrap" id="list-agenda" data-stagger></div></div>
+</section>
+
+<!-- COLLABORATION -->
+<section class="page" id="collaboration">
+  <div class="phead c-verm"><div class="wrap"><p class="eyebrow">La collaboration</p><h2>Collaborations</h2><p>[Une phrase qui résume votre projet artistique.]</p></div></div>
+  <div class="section"><div class="wrap split">
+    <div data-reveal="left">
+      <p>[Présentez les collaboration : Les differentes personnes avec qui ont a collaborer sur le projet.]</p>
+      <p>[Deuxième paragraphe : les artistes, les partenaires, les lieux de résidence.]</p>
+      <h3 class="block-title squig" data-reveal>Les artistes</h3>
+      <p>[Prénom Nom], chorégraphe. [Prénom Nom], danseur·se. [Biographies à ajouter]</p>
+    </div>
+    <div class="gallery" data-stagger>
+      <!-- Photo : ajoutez style="background-image:url('images/compagnie.jpg')" -->
+      <div class="ph">Photo</div>
+      <div class="ph">Photo</div>
+      <div class="ph">Photo</div>
+    </div>
+  </div></div>
 </section>
 
 <!-- PRESSE -->
@@ -191,7 +208,7 @@
 
 <footer><div class="wrap">
   <p class="f-word">On se dessine un monde.</p>
-  <div class="frow"><span>© <span id="y"></span> On se dessine un monde</span><span>Mentions légales · Confidentialité</span></div>
+  <div class="frow"><span>© <span id="y"></span> Shariifah Dah</span><span>Mentions légales · Confidentialité</span></div>
 </div></footer>
 
 <script>
@@ -199,9 +216,9 @@
    Pour une IMAGE : mettez la photo dans un dossier "images" à côté de ce fichier,
    puis écrivez son chemin : image:"images/spectacle1.jpg" (laissez "" pour aucune image).
    "inspire" = titre EXACT de l'ouvrage qui a inspiré le spectacle (liste OUVRAGES).
-   Ces listes alimentent le carrousel de l'accueil ET la page Spectacles. */
-   const SPECTACLES=[
-  {titre:"DJANDJOBA 360° d'Elles",annee:"2025",infos:"Création · 6 interprètes · 60 min",texte:"Djanjoba 365° d'Elles est un spectacle autour de la condition féminine : leurs histoires, joies, peines et combats. Sur une scénographie circulaire de quarante chaises, quarante femmes figurantes prennent place et participent à une création collective.",image:"images/djandjoba.jpeg",inspire:"L'émancipation de la femme et la lutte de libération des femmes - Thomas Sankara · Je suis née libre - Rokia Traoré · Parole de Femmes - Éditions Éloïse · Les Ambitieuses - Virginie Girod"},
+   Ces listes alimentent le carrousel de l'accueil ET la page CREATION. */
+   const CREATION=[
+  {titre:"DJANDJOBA 360° d'Elles",annee:"2026",infos:"Création · 9 interprètes dont 40 femmes· 60 min",texte:"Djanjoba 360° d'Elles est un spectacle autour de la condition féminine : leurs histoires, joies, peines et combats. Sur une scénographie circulaire de quarante chaises, quarante femmes figurantes prennent place et participent à une création collective.",image:"images/djandjoba.jpeg",inspire:"L'émancipation de la femme et la lutte de libération des femmes - Thomas Sankara · Je suis née libre - Rokia Traoré · Parole de Femmes - Éditions Éloïse · Les Ambitieuses - Virginie Girod"},
   {titre:"Titre de la création 2",annee:"2023",infos:"Duo · 45 min",texte:"[Résumé de la création en deux phrases.]",image:"",inspire:"Titre de l'ouvrage 2"},
   {titre:"Titre de la création 3",annee:"2021",infos:"Solo · 35 min",texte:"[Résumé de la création en deux phrases.]",image:"",inspire:"Titre de l'ouvrage 1"}
 ];
@@ -225,12 +242,12 @@ const $=s=>document.querySelector(s);
 const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
 const bg=u=>u?` style="background-image:url('${u}')"`:'';
 const card=s=>`<article class="card"><div class="img"${bg(s.image)}><span class="sticker">${s.annee}</span>${s.image?'':s.titre}</div><div class="meta">${s.annee} · ${s.infos}</div><h3>${s.titre}</h3>${s.inspire?`<p class="insp">Inspiré de : ${s.inspire}</p>`:''}<p>${s.texte}</p></article>`;
-const slide=s=>`<div class="car-slide"><article class="car-card"><div class="car-fig"${bg(s.image)}><span class="sticker">${s.annee}</span><span>${s.image?'':s.titre}</span></div><div class="car-body"><div class="meta">${s.annee} · ${s.infos}</div><h3>${s.titre}</h3>${s.inspire?`<p class="insp">Inspiré de : ${s.inspire}</p>`:''}<p>${s.texte}</p><div class="cta"><button class="btn sm" data-go="creations">Voir le spectacle</button></div></div></article></div>`;
+const slide=s=>`<div class="car-slide"><article class="car-card"><div class="car-fig"${bg(s.image)}><span class="sticker">${s.annee}</span><span>${s.image?'':s.titre}</span></div><div class="car-body"><div class="meta">${s.annee} · ${s.infos}</div><h3>${s.titre}</h3>${s.inspire?`<p class="insp">Inspiré de : ${s.inspire}</p>`:''}<p>${s.texte}</p><div class="cta"><button class="btn sm" data-go="creations">Voir la création</button></div></div></article></div>`;
 
 /* Rendus */
-$('#list-creations').innerHTML=SPECTACLES.map(card).join('');
+$('#list-creations').innerHTML=CREATION.map(card).join('');
 $('#list-lab-creation').innerHTML=LABORATOIRE_DE_CREATION.map(card).join('');
-$('#list-ouvrages').innerHTML=OUVRAGES.map(o=>{const l=SPECTACLES.filter(x=>x.inspire===o.titre).map(x=>x.titre);return `<div class="book"><div class="cover"${bg(o.image)}>${o.image?'':o.titre}</div><div><h3>${o.titre}</h3><div style="color:var(--muted)">${o.auteur} · ${o.annee}</div><p>${o.texte}</p>${l.length?`<p class="insp">A inspiré : ${l.join(', ')}</p>`:''}</div></div>`}).join('');
+$('#list-ouvrages').innerHTML=OUVRAGES.map(o=>{const l=CREATION.filter(x=>x.inspire===o.titre).map(x=>x.titre);return `<div class="book"><div class="cover"${bg(o.image)}>${o.image?'':o.titre}</div><div><h3>${o.titre}</h3><div style="color:var(--muted)">${o.auteur} · ${o.annee}</div><p>${o.texte}</p>${l.length?`<p class="insp">A inspiré : ${l.join(', ')}</p>`:''}</div></div>`}).join('');
 $('#list-agenda').innerHTML=AGENDA.map(a=>`<div class="date"><div class="d">${a.jour}<small>${a.mois}</small></div><div><h3>${a.titre}</h3><p>${a.lieu}</p></div><a class="btn alt" href="${a.lien}">Réserver</a></div>`).join('');
 
 /* Menu + navigation entre pages */
@@ -272,10 +289,10 @@ haut.addEventListener('click',()=>scrollTo({top:0,behavior:RM?'auto':'smooth'}))
 const cue=$('.cue');cue&&cue.addEventListener('click',()=>{const s=$('.steps');s&&s.scrollIntoView({behavior:RM?'auto':'smooth'})});
 
 /* ===== Carrousel des créations ===== */
-const N=SPECTACLES.length;
+const N=CREATION.length;
 const car=$('#car'),track=$('#car-track'),dots=$('#car-dots'),count=$('#car-count'),cpi=$('#car-prog-i'),vp=car.querySelector('.car-vp');
-track.innerHTML=SPECTACLES.map(slide).join('');
-dots.innerHTML=SPECTACLES.map((_,k)=>`<button class="car-dot" aria-label="Aller au spectacle ${k+1}"></button>`).join('');
+track.innerHTML=CREATION.map(slide).join('');
+dots.innerHTML=CREATION.map((_,k)=>`<button class="car-dot" aria-label="Aller au spectacle ${k+1}"></button>`).join('');
 const dotEls=[...dots.children];
 let ci=0,ctimer=null,holding=false;
 function carGo(k,user){
@@ -298,7 +315,8 @@ $('#car-next').addEventListener('click',()=>carGo(ci+1,true));
 dotEls.forEach((d,i)=>d.addEventListener('click',()=>carGo(i,true)));
 car.addEventListener('keydown',e=>{if(e.key==='ArrowLeft'){e.preventDefault();carGo(ci-1,true)}if(e.key==='ArrowRight'){e.preventDefault();carGo(ci+1,true)}});
 let sx=null,dragged=false;
-vp.addEventListener('pointerdown',e=>{sx=e.clientX;dragged=false;vp.classList.add('drag');try{vp.setPointerCapture(e.pointerId)}catch(_){}});
+/*vp.addEventListener('pointerdown',e=>{sx=e.clientX;dragged=false;vp.classList.add('drag');try{vp.setPointerCapture(e.pointerId)}catch(_){}});*/
+vp.addEventListener('pointerdown',e=>{if(e.target.closest('button,a'))return;sx=e.clientX;dragged=false;vp.classList.add('drag');try{vp.setPointerCapture(e.pointerId)}catch(_){}});
 vp.addEventListener('pointermove',e=>{if(sx!==null&&Math.abs(e.clientX-sx)>8)dragged=true});
 vp.addEventListener('pointerup',e=>{if(sx===null)return;const dx=e.clientX-sx;vp.classList.remove('drag');if(Math.abs(dx)>45){dx<0?carGo(ci+1,true):carGo(ci-1,true)}sx=null;setTimeout(()=>{dragged=false},50)});
 vp.addEventListener('pointercancel',()=>{sx=null;vp.classList.remove('drag')});
